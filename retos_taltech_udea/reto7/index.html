@@ -4,15 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
-    <title>Document</title>
+    <title>Agujeros Negros</title>
 </head>
 <body>
-    <header>
-        <h1></h1>
+    <header class="header">
+        <h1>Agujeros Negros - Encuesta</h1>
     </header>
 
-    <main>
-        <form action=""method="POST">
+    <main class="form-container">
+        <form action="https://formspree.io/f/mdkdgkzn"method="POST">
             <fieldset>
                 <legend>Información Personal</legend>
 
@@ -46,21 +46,35 @@
                         placeholder="Ingrese sus distancia aproximada"
                         min="100"
                         title="La distancia máxima conocida de un aujero negro es de 13.000 millones de años luz">
+
+
             </fieldset>
 
             <fieldset>
                 <legend>Tamaño</legend>
-                
+                <label for="size">Tamaño según su masa:</label>
+                <select name="size" id="Size" required>
+                    <option value="">Seleccione una opción:</option>
+                    <option value="supermasivo">Super masivo</option>
+                    <option value="masaintermedia">Masa intermedia</option>
+                    <option value="masaestelar">Masa estelar</option>
+                    <option value="micro">Micro agujeros negros</option>   
+                </select>
 
+                <label for="detection interest">Capacidad de detección</label>
+                <input type="radio" id="yes" name="detection interest" value="si" required>Si
+                <input type="radio" id="no" name="detection interest" value="no">No 
 
             </fieldset>
+
+            <button type="submit">Enviar encuesta</button>
 
 
         </form>
     </main>
 
-    <footer>
-
+    <footer class="footer">
+        <p>Gracias por participar en esta encuesta</p>
     </footer>
 
 </body>
